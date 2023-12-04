@@ -1,0 +1,25 @@
+.heading {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+ body {
+    background-image: url('istockphoto-1443688517-612x612.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  canvas {
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+}
+.footer {
+background-color: #f1f1f1;
+font-style: italic;
+border: 1px solid #ccc;
+padding: 10px;
+margin-top: 20px;
+}
