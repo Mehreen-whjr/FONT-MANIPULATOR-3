@@ -1,3 +1,7 @@
+let leftWristX;
+let rightWristX;
+let textSizeDifference;
+
 function setup() {
     createCanvas(640, 480);
     video = createCapture(VIDEO);
@@ -18,12 +22,12 @@ function setup() {
   function modelLoaded() {
     console.log('PoseNet model loaded!');
   }
-  function gotPoses(results) {
-    if (results.length > 0) {
-      leftWristX = results[0].pose.leftWrist.x;
-      rightWristX = results[0].pose.rightWrist.x;
+  function gotPoses(poses) {
+    if (poses.length > 0) {
+      leftWristX = poses[0].pose.leftWrist.x;
+      rightWristX = poses[0].pose.rightWrist.x;
       
-      let difference = floor(leftWristX - rightWristX);
-      textSize(difference);
+      let difference = leftWristX - rightWristX;
+      textSizeDifference = floor(difference);
     }
   }
